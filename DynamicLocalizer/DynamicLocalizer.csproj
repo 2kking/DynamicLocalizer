@@ -5,10 +5,13 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>DynamicLocalizer</Title>
         <Authors>shadowxs</Authors>
-        <Description>DynamicLocalizer</Description>
+        <Description>dynamic localizer for .net</Description>
         <Copyright>shadowxs</Copyright>
         <PackageTags>.net,localizer</PackageTags>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
+        <PackageProjectUrl></PackageProjectUrl>
+        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/2kking/DynamicLocalizer</RepositoryUrl>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
