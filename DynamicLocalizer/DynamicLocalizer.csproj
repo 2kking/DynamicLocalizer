@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>DynamicLocalizer</Title>
+        <Authors>shadowxs</Authors>
+        <Description>DynamicLocalizer</Description>
+        <Copyright>shadowxs</Copyright>
+        <PackageTags>.net,localizer</PackageTags>
+        <PackageVersion>1.0.1</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\DynamicLocalizer.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\DynamicLocalizer.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.6" />
+    </ItemGroup>
+
+</Project>
