@@ -6,7 +6,9 @@
 
 > use in Startup.cs with any resource by config
 
-- load resource from db with EFCore as below
+##### Config
+
+> load resource from db with EFCore as below
 
 ```c#
 services.AddDynamicLocalizer(new DynamicLocalizerOption()
@@ -54,6 +56,37 @@ services.AddDynamicLocalizer(new DynamicLocalizerOption()
 });
 
 app.UseDynamicLocalizer();
+```
+
+##### Use
+
+> same as IStringLocalizer (you can ReloadResource when resource changed)
+
+```c#
+[Route("api/[controller]")]
+[ApiController]
+public class TestController : BaseController
+{
+    private readonly IDynamicLocalizer _localizer;
+
+    public TestController(IDynamicLocalizer localizer)
+    {
+        _localizer = localizer;
+    }
+
+    [HttpGet]
+    public string Get()
+    {
+        return _localizer["test"];
+    }
+
+    [HttpGet("reload")]
+    public IActionResult Reload()
+    {
+        _localizer.ReloadResource();
+        return Ok();
+    }
+}
 ```
 
 
