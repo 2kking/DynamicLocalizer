@@ -1,4 +1,6 @@
 ### DynamicLocalizer
+[![NuGet](https://img.shields.io/nuget/v/DynamicLocalizer.svg)](https://www.nuget.org/packages/DynamicLocalizer/)
+![](https://img.shields.io/nuget/dt/DynamicLocalizer.svg)
 
 > .net core dynamic localizer for any resource
 
